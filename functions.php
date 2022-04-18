@@ -88,46 +88,46 @@ add_action( 'widgets_init', 'technosystem_widgets_init' );
  */
 function technosystem_scripts() {
 	// Third Part CSS
-	wp_enqueue_style( 'animate', THEME_URI . './assets/css/animate.css', null, THEME_VERSION );
-	wp_enqueue_style( 'bootstrap', THEME_URI . './assets/css/bootstrap.min.css', null, THEME_VERSION );
-	wp_enqueue_style( 'fontawesome', THEME_URI . './assets/css/fontawesome.css', null, THEME_VERSION );
-	wp_enqueue_style( 'magnifing', THEME_URI . './assets/css/magnific-popup.css', null, THEME_VERSION );
-	wp_enqueue_style( 'owl-carousel', THEME_URI . './assets/css/owl.carousel.min.css', null, THEME_VERSION );
-	wp_enqueue_style( 'owl-carousel-theme', THEME_URI . './assets/css/owl.theme.default.min.css', null, THEME_VERSION );
-	wp_enqueue_style( 'select2-custom', THEME_URI . './assets/css/select2-custom-style.css', null, THEME_VERSION );
-	wp_enqueue_style( 'select2', THEME_URI . './assets/css/select2.min.css', null, THEME_VERSION );
+	wp_enqueue_style( 'animate', THEME_URI . '/assets/css/animate.css', null, THEME_VERSION );
+	wp_enqueue_style( 'bootstrap', THEME_URI . '/assets/css/bootstrap.min.css', null, THEME_VERSION );
+	wp_enqueue_style( 'fontawesome', THEME_URI . '/assets/css/fontawesome.css', null, THEME_VERSION );
+	wp_enqueue_style( 'magnifing', THEME_URI . '/assets/css/magnific-popup.css', null, THEME_VERSION );
+	wp_enqueue_style( 'owl-carousel', THEME_URI . '/assets/css/owl.carousel.min.css', null, THEME_VERSION );
+	wp_enqueue_style( 'owl-carousel-theme', THEME_URI . '/assets/css/owl.theme.default.min.css', null, THEME_VERSION );
+	wp_enqueue_style( 'select2-custom', THEME_URI . '/assets/css/select2-custom-style.css', null, THEME_VERSION );
+	wp_enqueue_style( 'select2', THEME_URI . '/assets/css/select2.min.css', null, THEME_VERSION );
 
 	// Theme CSS
-	wp_enqueue_style( 'main-style', THEME_URI . './assets/css/style.css', null, THEME_VERSION );
+	wp_enqueue_style( 'main-style', THEME_URI . '/assets/css/style.css', null, THEME_VERSION );
 
 
 	// Third Part JS
 	wp_enqueue_script( 'technosystem-navigation', get_template_directory_uri() . '/js/navigation.js', array(), THEME_VERSION, true );
 
-	wp_enqueue_script( 'appear', THEME_URI . './assets/js/appear.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'appear', THEME_URI . '/assets/js/appear.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'bootstrap', THEME_URI . './assets/js/bootstrap.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'bootstrap', THEME_URI . '/assets/js/bootstrap.min.js', array('jquery'), THEME_VERSION, true );
 
 	//wp_enqueue_script( 'count-down', THEME_URI . './assets/js/count-down-x.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'essentials', THEME_URI . './assets/js/essential.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'essentials', THEME_URI . '/assets/js/essential.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'form-plugin', THEME_URI . './assets/js/form.plugin.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'form-plugin', THEME_URI . '/assets/js/form.plugin.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'form-validation', THEME_URI . './assets/js/form.validation.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'form-validation', THEME_URI . '/assets/js/form.validation.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'filterizr', THEME_URI . './assets/js/jquery.filterizr.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'filterizr', THEME_URI . '/assets/js/jquery.filterizr.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'magnific-popup', THEME_URI . './assets/js/magnific-popup.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'magnific-popup', THEME_URI . '/assets/js/magnific-popup.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'owl', THEME_URI . './assets/js/owl.carousel.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'owl', THEME_URI . '/assets/js/owl.carousel.min.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'proper', THEME_URI . './assets/js/popper.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'proper', THEME_URI . '/assets/js/popper.js', array('jquery'), THEME_VERSION, true );
 
-	wp_enqueue_script( 'select2', THEME_URI . './assets/js/select2.min.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'select2', THEME_URI . '/assets/js/select2.min.js', array('jquery'), THEME_VERSION, true );
 
 	// Theme JS
-	wp_enqueue_script( 'main', THEME_URI . './assets/js/script.js', array('jquery'), THEME_VERSION, true );
+	wp_enqueue_script( 'main', THEME_URI . '/assets/js/script.js', array('jquery'), THEME_VERSION, true );
 
 	// Comment reply
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
