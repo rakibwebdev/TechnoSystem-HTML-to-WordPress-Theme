@@ -14,7 +14,7 @@
                     autoplayTimeout: 2500,
                     animateOut: "fadeOut",
                     smartSpeed: 2500,
-                    navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
+                    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
                     dots: true,
                     autoplayHoverPause: true,
                     responsive: {

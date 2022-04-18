@@ -346,7 +346,7 @@ McMode = (function (McMode, $, window, document) {
 				smartSpeed: smartSpeed ? smartSpeed : 2000,
 				dots: dots ? true : false,
 				nav: nav ? true : false,
-				navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
+				navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 				navSpeed: navSpeed ? true : false,
 				responsiveClass: true,
 				responsive: {
