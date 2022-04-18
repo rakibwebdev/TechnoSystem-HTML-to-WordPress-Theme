@@ -346,38 +346,38 @@ McMode = (function (McMode, $, window, document) {
 				smartSpeed: smartSpeed ? smartSpeed : 2000,
 				dots: dots ? true : false,
 				nav: nav ? true : false,
-				navText: ["<img src='assets/images/prev-hero.svg' class='img-fluid' />", "<img src='assets/images/next-hero.svg' class='img-fluid' />"],
+				navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
 				navSpeed: navSpeed ? true : false,
 				responsiveClass: true,
 				responsive: {
-				   0: {
-				      items: xsDevice ? xsDevice : 1,
-				      nav: xsDeviceNav ? true : false,
-				      dots: xsDeviceDots ? true : false,
-				      center: false,
-				   },
-				   576: {
-				      items: smDevice2 ? smDevice2 : 2,
-				      nav: smDevice2Nav ? true : false,
-				      dots: smDevice2Dots ? true : false,
-				      center: false,
-				   },
-				   768: {
-				      items: smDevice ? smDevice : 3,
-				      nav: smDeviceNav ? true : false,
-				      dots: smDeviceDots ? true : false,
-				      center: false,
-				   },
-				   992: {
-				      items: mdDevice ? mdDevice : 4,
-				      nav: mdDeviceNav ? true : false,
-				      dots: mdDeviceDots ? true : false,
-				   },
-				   1200: {
-				      items: lgDevice ? lgDevice : 4,
-				      nav: lgDeviceNav ? true : false,
-				      dots: lgDeviceDots ? true : false,
-				   },
+					0: {
+						items: xsDevice ? xsDevice : 1,
+						nav: xsDeviceNav ? true : false,
+						dots: xsDeviceDots ? true : false,
+						center: false,
+					},
+					576: {
+						items: smDevice2 ? smDevice2 : 2,
+						nav: smDevice2Nav ? true : false,
+						dots: smDevice2Dots ? true : false,
+						center: false,
+					},
+					768: {
+						items: smDevice ? smDevice : 3,
+						nav: smDeviceNav ? true : false,
+						dots: smDeviceDots ? true : false,
+						center: false,
+					},
+					992: {
+						items: mdDevice ? mdDevice : 4,
+						nav: mdDeviceNav ? true : false,
+						dots: mdDeviceDots ? true : false,
+					},
+					1200: {
+						items: lgDevice ? lgDevice : 4,
+						nav: lgDeviceNav ? true : false,
+						dots: lgDeviceDots ? true : false,
+					},
 				},
 			});
 		});

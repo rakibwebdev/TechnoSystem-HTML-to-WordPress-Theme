@@ -14,7 +14,7 @@
                     autoplayTimeout: 2500,
                     animateOut: "fadeOut",
                     smartSpeed: 2500,
-                    navText: ["<img src='http://localhost/wp/technosystem/wp-content/uploads/2022/04/prev-hero.svg' class='img-fluid' />", "<img src='http://localhost/wp/technosystem/wp-content/uploads/2022/04/next-hero.svg' class='img-fluid' />"],
+                    navText: ["<i class='fa-solid fa-angle-left'></i>", "<i class='fa-solid fa-angle-right'></i>"],
                     dots: true,
                     autoplayHoverPause: true,
                     responsive: {

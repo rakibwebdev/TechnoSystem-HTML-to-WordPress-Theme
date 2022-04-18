@@ -783,18 +783,16 @@ new \Kirki\Section(
         'priority'    => 9,
     ]
 );
-new \Kirki\Field\Image(
+new \Kirki\Field\Text(
 	[
-		'settings'    => 'home_contact_section_img',
-		'label'       => esc_html__( 'Image', 'technosystem' ),
-		'section'     => 'home_contact_section',
-		'default'     => '',
-		'priority'    => 1,
-		'choices'     => [
-			'save_as' => 'url',
-		],
+		'settings' => 'home_contact_map',
+		'label'    => esc_html__( 'Map URL', 'technosystem' ),
+        'default'  => ( 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.9257575011193!2d-105.16371908461778!3d39.96541257942013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bf32fe7c4d345%3A0x3b1c98753ed160d3!2sVia%20Toscana!5e0!3m2!1sen!2sbd!4v1648872852034!5m2!1sen!2sbd'),
+		'section'  => 'home_contact_section',
+		'priority' => 9,
 	]
 );
+
 new \Kirki\Field\Text(
 	[
 		'settings' => 'home_contact_section_title',

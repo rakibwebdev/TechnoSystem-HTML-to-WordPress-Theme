@@ -1,74 +1,15 @@
 <?php
 get_header();
 ?>
-<!-- product info -->
-<section class="productSelection py-5" style="background-color: #F5F5F5;">
+    
+    <!-- product info -->
+    <section class="productSelection py-5" style="background-color: #F5F5F5;">
         <div class="container">
-            <div class="selectInfo">
-                <div class="row gx-5 align-items-end">
-                    <div class="col-xl-3 pb-0 pb-xl-0">
-                        <div class="mt-3 mt-xl-0">
-                            <label for="Applicazioni" class="form-label select-title d-block">
-                                Applicazioni
-                            </label>
-                            <select
-                                class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-                                id="Applicazioni">
-                                <option selected="0"> Riscaldare </option>
-                                <option value="1">two</option>
-                                <option value="2">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 pb-0 pb-xl-0">
-                        <div class="mt-3 mt-xl-0">
-                            <label for="Settore" class="form-label select-title d-block">
-                                Settore
-                            </label>
-                            <select
-                                class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-                                id="Settore">
-                                <option selected="0"> Civile </option>
-                                <option value="1">two</option>
-                                <option value="2">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 pb-0 pb-xl-0">
-                        <div class="mt-3 mt-xl-0">
-                            <label for="Lorem " class="form-label select-title d-block">
-                                Lorem ipsum
-                            </label>
-                            <select
-                                class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-                                id="Lorem">
-                                <option selected="0"> Piastre corrugate </option>
-                                <option value="1">two</option>
-                                <option value="2">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 pb-0 pb-xl-0">
-                        <div class="mt-3 mt-xl-0">
-                            <button class="red-btn mt-4 border-0">
-                                <span class="me-2"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.875 13.5C10.9816 13.5 13.5 10.9816 13.5 7.875C13.5 4.7684 10.9816 2.25 7.875 2.25C4.7684 2.25 2.25 4.7684 2.25 7.875C2.25 10.9816 4.7684 13.5 7.875 13.5Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M15.75 15.75L12 12" stroke="white" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg></span>
-                                Link alla pagina</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php echo do_shortcode( '[searchandfilter fields="search,product_cat,product_tag"]' ); ?>
         </div>
     </section>
     <!-- product info -->
-
+    <?php while(have_posts()): the_post(); ?>
     <!-- product description -->
     <section class="py-5 bg-white">
         <div class="container">
@@ -77,28 +18,22 @@ get_header();
                     <div class="col-xl-6">
 
                         <div id="slider" class="owl-carousel product-slider">
+                            <?php $image_lists = get_field('image_gallery');
+                            foreach ($image_lists as $image_list) { 
+                            ?>
                             <div class="item">
-                                <img src="assets/images/productDescription.png" class="mx-auto" />
+                                <img class="mx-auto" src="<?php echo $image_list['image']; ?>" alt="<?php echo $image_list['alt']; ?>" />
                             </div>
-                            <div class="item">
-                                <img src="assets/images/productDescription.png" class="mx-auto" />
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/productDescription.png" class="mx-auto" />
-                            </div>
-
+                            <?php } ?>
                         </div>
 
                         <div id="thumb" class="owl-carousel product-thumb">
+                            <?php
+                            foreach ($image_lists as $image_list) { ?>
                             <div class="item">
-                                <img src="assets/images/slideBar1.png" />
+                            <img src="<?php echo $image_list['image']; ?>" alt="<?php echo $image_list['alt']; ?>" />
                             </div>
-                            <div class="item">
-                                <img src="assets/images/slideBar2.png" />
-                            </div>
-                            <div class="item">
-                                <img src="assets/images/slideBar3.png" />
-                            </div>
+                            <?php } ?>
 
                         </div>
                     </div>
@@ -107,25 +42,21 @@ get_header();
                      <div class="">
                             <!--/ breadcrumb -->
                         <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb py-5 mb-0  d-flex justify-content-start ps-5">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#"> Nome pagina</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
+                            <ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
+                                <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title();?></li>
                             </ol>
                         </nav>
                         <!--/ breadcrumb -->
 
 
                         <div class="sec-title-area  border-start ps-5">
-                            <span class="sec-sub-tile fw-400">Piastre corrugate</span>
+                            <span class="sec-sub-tile fw-400"><?php the_field('sub_title');?></span>
                             <h2 class="sec-title fw-700">
-                                TSC 510
+                                <?php echo get_the_title();?>
                             </h2>
                             <p class="sec-description fw-400">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                <?php echo get_the_content();?>
 
                             </p>
 
@@ -150,7 +81,7 @@ get_header();
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <span class="">
-                                            Riscaldare
+                                        <?php the_field('applications');?>
 
                                         </span>
                                     </div>
@@ -175,7 +106,7 @@ get_header();
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <span class="">
-                                            Civile
+                                        <?php the_field('sector');?>
 
                                         </span>
                                     </div>
@@ -207,7 +138,7 @@ get_header();
                                                 fill="#292D32" />
                                         </svg>
                                     </span>
-                                    Scheda tecnica
+                                    <?php the_field('data_sheet');?>
                                 </button>
                                 <button
                                     class=" product-description-btn dflex align-items-center justify-content-center">
@@ -231,7 +162,7 @@ get_header();
                                         </svg>
 
                                     </span>
-                                    Scheda tecnica
+                                    <?php the_field('data_sheet_2');?>
                                 </button>
                             </div>
 
@@ -265,20 +196,19 @@ get_header();
                         <tbody>
                             <tr>
                                 <td class="table-specification-heading">Applicazioni</td>
-                                <td class="table-specification-details">Riscaldamento, raffreddamento, utilizzabile con
-                                    vapore </td>
+                                <td class="table-specification-details"> <?php the_field('technical_features_applications');?></td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading">Portata max.</td>
-                                <td class="table-specification-details">15 m3/h (con acqua) </td>
+                                <td class="table-specification-details"> <?php the_field('max_flow');?></td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading">Numero di piastre max.</td>
-                                <td class="table-specification-details">75</td>
+                                <td class="table-specification-details"><?php the_field('number_of_plates_max');?></td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading border-0">Telaio</td>
-                                <td class="table-specification-details  border-0">PN10, PN16 (standard PN10)</td>
+                                <td class="table-specification-details  border-0"><?php the_field('chassis');?></td>
                             </tr>
 
                         </tbody>
@@ -294,22 +224,19 @@ get_header();
                         <tbody>
                             <tr>
                                 <td class="table-specification-heading">Telaio</td>
-                                <td class="table-specification-details">Acciaio al carbonio verniciato - acciaio inox
-                                    AISI 304 – AISI 316 </td>
+                                <td class="table-specification-details"><?php the_field('materials_chassis');?> </td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading">Piastre</td>
-                                <td class="table-specification-details">Acciaio inox AISI 304 – AISI 316 - titanio,
-                                    incoloy, monel, hastelloy </td>
+                                <td class="table-specification-details"><?php the_field('plates');?></td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading">Guarnizioni</td>
-                                <td class="table-specification-details">NBR, EPDM, EPM, FKM, Silicone</td>
+                                <td class="table-specification-details"><?php the_field('gaskets');?></td>
                             </tr>
                             <tr>
                                 <td class="table-specification-heading border-0">Connessioni</td>
-                                <td class="table-specification-details  border-0">Acciaio al carbonio, acciaio inox,
-                                    Polipropilene, PTFE (Teflon) </td>
+                                <td class="table-specification-details  border-0"><?php the_field('connections');?></td>
                             </tr>
 
                         </tbody>
@@ -331,16 +258,18 @@ get_header();
         </div>
         <div class="caseWrapper">
             <div class="row">
+                <?php $history_lists = get_field('case_history');
+                foreach ($history_lists as $list) { 
+                ?>
                 <div class="col-xl-4">
                     <a href="" class="history-content text-decoration-none d-block position-relative">
-                        <img src="assets/images/casehistory1.png" alt="" class="img-fluid">
+                        <img src="<?php echo $list['image'] ?>" alt="" class="img-fluid">
                         <div class="position-absolute bottom-0 start-0">
                             <div class="d-flex align-items-end">
                                 <div class="hoverContent ">
                                     <div class="py-4 px-4 bg-gray ">
-                                        <h2>Lorem ipsum</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. </p>
+                                        <h2><?php echo $list['title'] ?></h2>
+                                        <p><?php echo $list['content'] ?></p>
                                     </div>
                                 </div>
                                 <div class="icon bg-danger text-center mx-auto d-flex align-items-center">
@@ -350,44 +279,7 @@ get_header();
                         </div>
                     </a>
                 </div>
-                <div class="col-xl-4">
-                    <a href="" class="history-content text-decoration-none d-block position-relative">
-                        <img src="assets/images/casehistory2.png" alt="" class="img-fluid">
-                        <div class="position-absolute bottom-0 start-0">
-                            <div class="d-flex align-items-end">
-                                <div class="hoverContent ">
-                                    <div class="py-4 px-4 bg-gray ">
-                                        <h2>Lorem ipsum</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    </div>
-                                </div>
-                                <div class="icon bg-danger text-center mx-auto d-flex align-items-center">
-                                    <i class="far fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4">
-                    <a href="" class="history-content text-decoration-none d-block position-relative">
-                        <img src="assets/images/casehistory1.png" alt="" class="img-fluid">
-                        <div class="position-absolute bottom-0 start-0">
-                            <div class="d-flex align-items-end">
-                                <div class="hoverContent ">
-                                    <div class="py-4 px-4 bg-gray ">
-                                        <h2>Lorem ipsum</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    </div>
-                                </div>
-                                <div class="icon bg-danger text-center mx-auto d-flex align-items-center">
-                                    <i class="far fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -405,72 +297,31 @@ get_header();
                     </h2>
 
 
-
                     <div class="accordion mt-5">
                         <ul class="accordion-list list-unstyled">
-                            <li class="accordion-list-item  open">
+                            <?php $faq_lists = get_field('faq');
+                            $count = 0;
+                            foreach ($faq_lists as $list) {
+                            ?>
+                            <li class="accordion-list-item  <?php if($count == 0 ): 
+                                echo 'open';
+                                endif;?>">
                                 <h5 class="accordion-title d-flex justify-content-between mb-0">
-                                    Cosa sono gli scambiatori di calore?
+                                    <?php echo $list['title']; ?>
                                     <span>
-                                        <img src="assets/images/arrow-down.svg" class="img-fluid" alt="">
+                                        <img src="<?php THEME_URI . 'assets/images/arrow-down.svg'?>" class="img-fluid" alt="">
                                     </span>
                                 </h5>
                                 <div class="accordion-desc">
                                     <p class="pe-5 pt-3">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    <?php echo $list['content']; ?>
                                     </p>
                                 </div>
                             </li>
-                            <li class="accordion-list-item ">
-                                <h5 class="accordion-title d-flex justify-content-between mb-0">
-                                    How do we manage quality assurance?
+                            <?php
+                            $count++;
+                             } ?>
 
-                                    <span>
-                                        <img src="assets/images/arrow-down.svg" class="img-fluid" alt="">
-                                    </span>
-                                </h5>
-                                <div class="accordion-desc" style="display: none;">
-                                    <p class="pt-3 pe-5">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quo animi enim
-                                        illum doloremque quod quos quaerat
-                                        quibusdam ullam magnam ab voluptates doloribus neque veritatis repellendus,
-                                        atque laudantium voluptatum facere!
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion-list-item ">
-                                <h5 class="accordion-title d-flex justify-content-between mb-0">
-                                    How do we handle certifications?
-
-                                    <span>
-                                        <img src="assets/images/arrow-down.svg" class="img-fluid" alt="">
-                                    </span>
-                                </h5>
-                                <div class="accordion-desc" style="display: none;">
-                                    <p class="pt-3 pe-5">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur ad voluptas
-                                        ipsum, obcaecati quis necessitatibus hic
-                                        neque dicta ratione
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion-list-item ">
-                                <h5 class="accordion-title d-flex justify-content-between mb-0">
-                                    How do we give back to the community?
-                                    <span>
-                                        <img src="assets/images/arrow-down.svg" class="img-fluid" alt="">
-                                    </span>
-                                </h5>
-                                <div class="accordion-desc" style="display: none;">
-                                    <p class="pt-3 pe-5">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, perferendis
-                                        culpa veritatis a molestias laboriosam,
-                                        autem cum quaerat assumenda ut harum quia repellendus quasi!
-                                    </p>
-                                </div>
-                            </li>
 
                         </ul>
                     </div>
@@ -488,163 +339,29 @@ get_header();
         <div class="container">
 
             <div class="reviewCarousels owl-carousel owl-theme">
+                <?php $review_lists = get_field('review');
+                foreach ($review_lists as $list) {
+                ?>
                 <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
+                    <img src="<?php echo $list['quote'] ?>" alt="" class="img-fluid" />
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                        <p><?php echo $list['content'] ?></p>
                         </p>
                         <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
+                            <img src="<?php echo $list['avatar'] ?>" class="img-fluid" alt="">
                             <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
+                                <h4 class="mb-0"><?php echo $list['name'] ?></h4>
+                                <p class="fs-5"><?php echo $list['company'] ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member3.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member3.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member3.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviewItem">
-                    <img src="assets/images/clone.png" alt="" class="img-fluid" />
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <div class="member-info d-flex gap-3 align-items-center">
-                            <img src="assets/images/member.png" class="img-fluid" alt="">
-                            <div>
-                                <h4 class="mb-0">Paul Fox </h4>
-                                <p class="fs-5">Applauz</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
 
     </section>
     <!--/ review -->
+    <?php endwhile; ?>
 <?php
 get_footer();

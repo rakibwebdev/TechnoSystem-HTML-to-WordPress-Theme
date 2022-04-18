@@ -50,7 +50,7 @@ $helping_option2_repeater = Kirki::get_option('helping_option2_repeater');
 
 $feautes_section_repeater = Kirki::get_option('feautes_section_repeater');
 
-$home_contact_section_img = Kirki::get_option('home_contact_section_img');
+$home_contact_map = Kirki::get_option('home_contact_map');
 $home_contact_section_title = Kirki::get_option('home_contact_section_title');
 $home_contact_section_sub_title = Kirki::get_option('home_contact_section_sub_title');
 $home_contact_section_short_desc = Kirki::get_option('home_contact_section_short_desc');
@@ -122,63 +122,7 @@ $home_contact_section_btn_url = Kirki::get_option('home_contact_section_btn_url'
 				<p class="normal-pra "><?php echo $choose_product_short_desc; ?></p>
 				<div class="selectInfo">
 					<div class="row align-items-end mt-4">
-						<div class="col-xl-3 pb-0 pb-xl-0">
-							<div class="mt-3 mt-xl-0">
-								<label for="Applicazioni" class="form-label select-title d-block">
-									Applicazioni
-								</label>
-								<select
-									class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-									id="Applicazioni">
-									<option selected="0">Riscaldare</option>
-									<option value="1">two</option>
-									<option value="2">Three</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-xl-3 pb-0 pb-xl-0">
-							<div class="mt-3 mt-xl-0">
-								<label for="Settore" class="form-label select-title d-block">
-									Settore
-								</label>
-								<select
-									class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-									id="Settore">
-									<option selected="0">Civile</option>
-									<option value="1">two</option>
-									<option value="2">Three</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-xl-3 pb-0 pb-xl-0">
-							<div class="mt-3 mt-xl-0">
-								<label for="Lorem " class="form-label select-title d-block">
-									Lorem ipsum
-								</label>
-								<select
-									class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-									id="Lorem">
-									<option selected="0">Piastre corrugate</option>
-									<option value="1">two</option>
-									<option value="2">Three</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-xl-3 pb-0 pb-xl-0">
-							<div class="mt-3 mt-xl-0">
-								<button class="red-btn mt-4">
-									<span class="me-2"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M7.875 13.5C10.9816 13.5 13.5 10.9816 13.5 7.875C13.5 4.7684 10.9816 2.25 7.875 2.25C4.7684 2.25 2.25 4.7684 2.25 7.875C2.25 10.9816 4.7684 13.5 7.875 13.5Z"
-												stroke="white" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-											<path d="M15.75 15.75L12 12" stroke="white" stroke-width="1.5"
-												stroke-linecap="round" stroke-linejoin="round" />
-										</svg></span>
-									Link alla pagina</button>
-							</div>
-						</div>
+					<?php echo do_shortcode( '[searchandfilter fields="search,product_cat,product_tag"]' ); ?>
 					</div>
 				</div>
 
@@ -306,6 +250,7 @@ $home_contact_section_btn_url = Kirki::get_option('home_contact_section_btn_url'
 	<!--/ call to action -->
 	<section class="py-5 bg-gray">
 		<div class="container">
+		
 			<div class="row align-items-end ">
 				<div class="col-xl-3 pb-0 pb-xl-0">
 					<div class="mt-3 mt-xl-0">
@@ -313,48 +258,8 @@ $home_contact_section_btn_url = Kirki::get_option('home_contact_section_btn_url'
 						<h2 class="title">Cerca ricambi</h2>
 					</div>
 				</div>
-				<div class="col-xl-3 pb-0 pb-xl-0">
-					<div class="mt-3 mt-xl-0">
-						<label for="Categoria" class="form-label select-title d-block">
-							Categoria
-						</label>
-						<select
-							class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-							id="Categoria">
-							<option selected="0"> Scambiatori ispezionabili </option>
-							<option value="1">two</option>
-							<option value="2">Three</option>
-						</select>
-					</div>
-				</div>
-				<div class="col-xl-3 pb-0 pb-xl-0">
-					<div class="mt-3 mt-xl-0">
-						<label for="Nome " class="form-label select-title d-block">
-							Nome prodotto
-						</label>
-						<select
-							class="select-2-init form-select fs-6 fw-bold text-gray-dark h-50 is-radius-8 py-2 w-100"
-							id="Nome">
-							<option selected="0">TSC 510</option>
-							<option value="1">two</option>
-							<option value="2">Three</option>
-						</select>
-					</div>
-				</div>
-				<div class="col-xl-3 pb-0 pb-xl-0">
-					<div class="mt-3 mt-xl-0">
-						<button class="blue-btn mt-4">
-							<span class="me-2"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M7.875 13.5C10.9816 13.5 13.5 10.9816 13.5 7.875C13.5 4.7684 10.9816 2.25 7.875 2.25C4.7684 2.25 2.25 4.7684 2.25 7.875C2.25 10.9816 4.7684 13.5 7.875 13.5Z"
-										stroke="white" stroke-width="1.5" stroke-linecap="round"
-										stroke-linejoin="round" />
-									<path d="M15.75 15.75L12 12" stroke="white" stroke-width="1.5"
-										stroke-linecap="round" stroke-linejoin="round" />
-								</svg></span>
-							Link alla pagina</button>
-					</div>
+				<div class="col-xl-9">
+				<?php echo do_shortcode( '[searchandfilter fields="search,product_cat,product_tag"]' ); ?>
 				</div>
 			</div>
 		</div>
@@ -458,7 +363,7 @@ $home_contact_section_btn_url = Kirki::get_option('home_contact_section_btn_url'
 	<section class="contact-section">
 		<div class="d-flex align-items-center">
 			<div class="map-wrap">
-				<img src="<?php echo $home_contact_section_img;?>" alt="">
+			<iframe src="<?php echo $home_contact_map; ?>" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 			<div class="sec-title-area ">
 				<span class="sec-sub-tile fw-400"><?php echo $home_contact_section_sub_title;?></span>

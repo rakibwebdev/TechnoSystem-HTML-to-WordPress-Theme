@@ -41,8 +41,8 @@ function register_required_plugins() {
 			'required'  => true,
 		),
 		array(
-			'name'      => 'Advanced Custom Fields',
-			'slug'      => 'advanced-custom-fields',
+			'name'      => 'Search and Filter',
+			'slug'      => 'search-filter',
 			'required'  => true,
 		),
 		
