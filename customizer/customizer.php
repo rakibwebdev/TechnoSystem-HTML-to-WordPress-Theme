@@ -2141,3 +2141,48 @@ new \Kirki\Field\Text(
 		'priority' => 13,
 	]
 );
+
+// Home Page Section
+new \Kirki\Section(
+	'product_archive',
+	[
+		'title'       => esc_html__( 'Product Archive', 'technosystem' ),
+		'panel'       => 'theme_options',
+        'priority'    => 50,
+	]
+);
+// Slider Content
+new \Kirki\Field\Repeater(
+	[
+		'settings' => 'product_archive_slider_setting',
+		'label'    => esc_html__( 'Slider Content', 'technosystem' ),
+		'section'  => 'product_archive',
+        'priority' => 1,
+		'default'  => [
+			[
+				'slider_title'   => esc_html__( 'Product', 'technosystem' ),
+				'slider_image'    => '',
+			],
+			[
+				'slider_title'   => esc_html__( 'Product', 'technosystem' ),
+				'slider_image'    => '',
+			],
+			[
+				'slider_title'   => esc_html__( 'Product', 'technosystem' ),
+				'slider_image'    => '',
+			],
+		],
+		'fields'   => [
+			'slider_title'   => [
+				'type'        => 'text',
+				'label'       => esc_html__( 'Title', 'technosystem' ),
+				'default'     => '',
+			],
+			'slider_image'    => [
+				'type'        => 'image',
+				'label'       => esc_html__( 'BG Image', 'technosystem' ),
+				'default'     => '',
+			],
+		],
+	]
+);

@@ -278,7 +278,7 @@ $header_section_app_url = Kirki::get_option( 'header_section_app_url' );
 					<!-- Logo  -->
 					<div class="col-md-2 col-6">
 						<div class="header-logo">
-							<a href="<?php home_url()?>">
+							<a href="<?php echo home_url('/'); ?>">
 							<?php if(!empty($header_section_logo)){ ?>
 								<img src="<?php echo $header_section_logo; ?>" alt="Mappix">
 							<?php }else{ ?>

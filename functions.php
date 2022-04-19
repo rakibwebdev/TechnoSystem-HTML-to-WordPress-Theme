@@ -1,7 +1,7 @@
 <?php
 
 
-define( 'THEME_VERSION', '1.0.2' );
+define( 'THEME_VERSION', '1.0.3' );
 define( 'THEME_URI', get_template_directory_uri(  ) );
 
 function technosystem_setup() {

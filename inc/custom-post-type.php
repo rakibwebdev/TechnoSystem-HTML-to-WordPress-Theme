@@ -19,7 +19,7 @@ function create_post_type_product() {
         'product',
         array(
             'label' => __( 'Categories' ),
-            'rewrite' => array( 'slug' => 'category' ),
+            'rewrite' => array( 'slug' => 'product_cat' ),
             'hierarchical' => true,
         )
     );
@@ -28,7 +28,7 @@ function create_post_type_product() {
         'product',
         array(
             'label' => __( 'Tags' ),
-            'rewrite' => array( 'slug' => 'tag' ),
+            'rewrite' => array( 'slug' => 'product_tag' ),
             'hierarchical' => false,
         )
     );
