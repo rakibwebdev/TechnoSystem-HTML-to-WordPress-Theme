@@ -312,7 +312,9 @@ get_header();
                                         <img src="<?php THEME_URI . 'assets/images/arrow-down.svg'?>" class="img-fluid" alt="">
                                     </span>
                                 </h5>
-                                <div class="accordion-desc">
+                                <div class="accordion-desc" <?php if($count != 0 ): 
+                                echo 'style="display:none;"';
+                                endif;?>>
                                     <p class="pe-5 pt-3">
                                     <?php echo $list['content']; ?>
                                     </p>
