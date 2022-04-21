@@ -58,7 +58,7 @@ $certificate_3_story_img = Kirki::get_option( 'certificate_3_story_img');
 	<!--/ breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home','techonosystem'); ?></a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title();?></li>
 		</ol>
 	</nav>

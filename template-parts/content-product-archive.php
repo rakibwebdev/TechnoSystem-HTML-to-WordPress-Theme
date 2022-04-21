@@ -39,7 +39,7 @@ $product_tags = get_terms( array(
 	<!--/ breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home', 'technosystem'); ?></a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php echo single_cat_title();?></li>
 		</ol>
 	</nav>
@@ -50,14 +50,14 @@ $product_tags = get_terms( array(
 	<div class="container-fluid px-0 mx-0">
 		<div class="d-flex">
 			<div class="productSitebar px-5 py-5 bg-gray">
-				<h2 class="productSelectTitle mb-0">Trova subito il prodotto che fa per te:</h2>
+				<h2 class="productSelectTitle mb-0"><?php _e('Trova subito il prodotto che fa per te:', 'technosystem'); ?></h2>
 				<div class="application mt-5">
                     
 					<div class="navigatioWidget is-radius-15 collapsed-group pb-4 border-bottom">
 						<div class="wdgetHeader d-flex align-items-center justify-content-between pb-2">
 							<div class="edge-card-caption">
 								<h4 class="product-subheading mb-0">
-									Applicazioni
+									<?php _e('Applicazioni', 'technosystem'); ?>
 								</h4>
 							</div>
 							<button class="btnCollapsedToggle border-0">
@@ -81,7 +81,7 @@ $product_tags = get_terms( array(
 						<div class="wdgetHeader d-flex align-items-center justify-content-between pb-2">
 							<div class="edge-card-caption">
 								<h4 class="product-subheading mb-0">
-									Settore
+									
 								</h4>
 							</div>
 							<button class="btnCollapsedToggle border-0">
@@ -105,7 +105,8 @@ $product_tags = get_terms( array(
 						<div class="wdgetHeader d-flex align-items-center justify-content-between pb-2">
 							<div class="edge-card-caption">
 								<h4 class="product-subheading mb-0">
-									Es. filtri chiusi
+									
+									<?php _e('Es. filtri chiusi', 'technosystem'); ?>
 								</h4>
 							</div>
 							<button class="btnCollapsedToggle border-0">
@@ -121,7 +122,8 @@ $product_tags = get_terms( array(
 										<path d="M15.75 15.75L12 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 									</svg>
 								</span>
-								Cerca prodotto
+								
+								<?php _e('Cerca prodotto', 'technosystem'); ?>
 							</button>
 							</div>
 						</div>

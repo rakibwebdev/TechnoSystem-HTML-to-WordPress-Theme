@@ -41,7 +41,7 @@ $service_page_discover_repeater = Kirki::get_option( 'service_page_discover_repe
 	<!--/ breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home','technosystem');?></a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title();?></li>
 		</ol>
 	</nav>

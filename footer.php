@@ -64,7 +64,7 @@ $newsletter_form = Kirki::get_option( 'newsletter_form' );
 					</div>
 				</div><!-- end col-->
 				<div class="col-lg-4 footer-menu">
-					<h3 class="fw-700 footer-menu-title">Menu</h3>
+					<h3 class="fw-700 footer-menu-title"><?php _e( 'Menu', 'technosystem' ); ?></h3>
 					<ul class="footer-menu-list">
 						<?php foreach($footer_menu as $item): ?>
 						<li>
@@ -74,7 +74,7 @@ $newsletter_form = Kirki::get_option( 'newsletter_form' );
 					</ul>
 				</div><!-- end col -->
 				<div class="col-lg-4 footer-menu">
-					<h3 class="fw-700 footer-menu-title">Contact us</h3>
+					<h3 class="fw-700 footer-menu-title"><?php _e( 'Contact us', 'technosystem' ); ?></h3>
 					<?php foreach($footer_contact as $item): ?>
 					<div class="footer-contact-info d-flex align-items-center">
 						<span class="footer-contact-info-icon">
