@@ -11,7 +11,7 @@
 <!--/ breadcrumb -->
 <nav aria-label="breadcrumb ">
 		<ol class="breadcrumb  mb-0  d-flex justify-content-center section-padding">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home', 'technosystem'); ?></a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
 		</ol>
 	</nav>

@@ -14,9 +14,9 @@ get_header();
 		<div class="row">
 			<div class="col-md-12">
 				<div class="page-header text-center">
-					<h1><?php _e('404', 'technosystem'); ?></h1>
-					<h2><?php _e('Page not found', 'technosystem'); ?></h2>
-					<a href="<?php echo home_url( ); ?>" class="btn btn-primary mt-3"><?php _e('Return to home', 'technosystem'); ?></a>
+					<h1>404</h1>
+					<h2>Page not found</h2>
+					<a href="<?php echo home_url( ); ?>" class="btn btn-primary mt-3">Return to home</a>
 				</div>
 				
 			</div>

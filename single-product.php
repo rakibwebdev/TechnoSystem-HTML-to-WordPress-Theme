@@ -43,7 +43,7 @@ get_header();
                             <!--/ breadcrumb -->
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-                                <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home', 'technosystem');?></a></li>
+                                <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title();?></li>
                             </ol>
                         </nav>
@@ -64,7 +64,7 @@ get_header();
                                 <div class="border-end pe-5">
                                     <div class="edge-card-caption">
                                         <h4 class="product-subheading mb-0">
-                                            <?php _e('Applicazioni', 'technosystem');?>
+                                            Applicazioni
                                         </h4>
                                     </div>
                                     <div>
@@ -89,7 +89,7 @@ get_header();
                                 <div>
                                     <div class="edge-card-caption">
                                         <h4 class="product-subheading mb-0">
-                                            <?php _e('Settore', 'technosystem');?>
+                                            Settore
                                         </h4>
                                     </div>
                                     <div>
@@ -168,7 +168,7 @@ get_header();
 
                             <div
                                 class="faqBar descriptionMore d-flex gap-3 align-items-center justify-content-start mb-3 mt-5 pb-5">
-                                <h5 class="mb-0"><?php _e('Cerca ricambi', 'technosystem');?></h5>
+                                <h5 class="mb-0">Cerca ricambi</h5>
                                 <img src="assets/images/arrow-down.svg" alt="">
                             </div>
                         </div>
@@ -189,25 +189,25 @@ get_header();
             </a>
             <div class="border-red pb-4">
                 <div class="specification-heading" style="max-width:354px; width: 100%;">
-                    <h2 class="productSelectTitle mb-0"><?php _e('Caratteristiche tecniche:', 'technosystem');?></h2>
+                    <h2 class="productSelectTitle mb-0">Caratteristiche tecniche:</h2>
                 </div>
                 <div class="">
                     <table class="table mt-4">
                         <tbody>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Applicazioni', 'technosystem');?></td>
+                                <td class="table-specification-heading">Applicazioni</td>
                                 <td class="table-specification-details"> <?php the_field('technical_features_applications');?></td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Portata max.', 'technosystem');?></td>
+                                <td class="table-specification-heading">Portata max.</td>
                                 <td class="table-specification-details"> <?php the_field('max_flow');?></td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Numero di piastre max.', 'technosystem');?></td>
+                                <td class="table-specification-heading">Numero di piastre max.</td>
                                 <td class="table-specification-details"><?php the_field('number_of_plates_max');?></td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading border-0"><?php _e('Telaio', 'technosystem');?></td>
+                                <td class="table-specification-heading border-0">Telaio</td>
                                 <td class="table-specification-details  border-0"><?php the_field('chassis');?></td>
                             </tr>
 
@@ -217,25 +217,25 @@ get_header();
             </div>
             <div class="pb-4 mt-5">
                 <div class="specification-heading" style="max-width:354px; width: 100%;">
-                    <h2 class="productSelectTitle mb-0"><?php _e('Materiali', 'technosystem');?></h2>
+                    <h2 class="productSelectTitle mb-0">Materiali</h2>
                 </div>
                 <div class="">
                     <table class="table mt-4">
                         <tbody>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Telaio', 'technosystem');?></td>
+                                <td class="table-specification-heading">Telaio</td>
                                 <td class="table-specification-details"><?php the_field('materials_chassis');?> </td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Piastre', 'technosystem');?></td>
+                                <td class="table-specification-heading">Piastre</td>
                                 <td class="table-specification-details"><?php the_field('plates');?></td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading"><?php _e('Guarnizioni', 'technosystem');?></td>
+                                <td class="table-specification-heading">Guarnizioni</td>
                                 <td class="table-specification-details"><?php the_field('gaskets');?></td>
                             </tr>
                             <tr>
-                                <td class="table-specification-heading border-0"><?php _e('Connessioni', 'technosystem');?></td>
+                                <td class="table-specification-heading border-0">Connessioni</td>
                                 <td class="table-specification-details  border-0"><?php the_field('connections');?></td>
                             </tr>
 
@@ -251,8 +251,8 @@ get_header();
     <div class="caseHistory section-padding">
         <div class="container">
             <div class="sec-title-area pe-4">
-                <span class="sec-sub-tile fw-400 text-end ms-5 mt-5"> <?php _e('Riscaldae', 'technosystem');?></span>
-                <h4 class="sec-title fw-700 ms-5"><?php _e('Case history', 'technosystem');?></h4>
+                <span class="sec-sub-tile fw-400 text-end ms-5 mt-5">Riscaldae</span>
+                <h4 class="sec-title fw-700 ms-5">Case history</h4>
             </div>
 
         </div>
@@ -291,9 +291,9 @@ get_header();
             <div class="solution-content">
                 <div class="sec-title-area  text-start">
 
-                    <span class="sec-sub-tile fw-400"> <?php _e('TSC 510', 'technosystem');?></span>
+                    <span class="sec-sub-tile fw-400">TSC 510</span>
                     <h2 class="sec-title fw-700">
-                         <?php _e('FAQ', 'technosystem');?><br class="d-inline"><?php _e('Frequently Asked Question', 'technosystem');?>
+                        FAQ <br class="d-inline">Frequently Asked Question
                     </h2>
 
 
@@ -312,9 +312,7 @@ get_header();
                                         <img src="<?php THEME_URI . 'assets/images/arrow-down.svg'?>" class="img-fluid" alt="">
                                     </span>
                                 </h5>
-                                <div class="accordion-desc" <?php if($count != 0 ): 
-                                echo 'style="display:none;"';
-                                endif;?>>
+                                <div class="accordion-desc">
                                     <p class="pe-5 pt-3">
                                     <?php echo $list['content']; ?>
                                     </p>

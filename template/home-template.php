@@ -254,8 +254,8 @@ $home_contact_section_btn_url = Kirki::get_option('home_contact_section_btn_url'
 			<div class="row align-items-end ">
 				<div class="col-xl-3 pb-0 pb-xl-0">
 					<div class="mt-3 mt-xl-0">
-						<span class="sec-sub-tile fw-400"><?php _e('Ricambi','technosystem');?> </span>
-						<h2 class="title"><?php _e('Cerca ricambi','technosystem');?> </h2>
+						<span class="sec-sub-tile fw-400">Ricambi</span>
+						<h2 class="title">Cerca ricambi</h2>
 					</div>
 				</div>
 				<div class="col-xl-9">

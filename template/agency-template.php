@@ -47,7 +47,7 @@ $agency_page_multinationals_short_desc = Kirki::get_option( 'agency_page_multina
 	<!--/ breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php _e('Home','techonosystem'); ?></a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php echo get_the_title();?></li>
 		</ol>
 	</nav>
