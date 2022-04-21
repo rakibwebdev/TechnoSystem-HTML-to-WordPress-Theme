@@ -2011,8 +2011,8 @@ new \Kirki\Field\Repeater(
         'priority' => 3,
 		'default'  => [
 			[
-				'title'    => 'Techno System srl',
-				'sub_title'    => 'Via Toscana, 160 - 50052 Certaldo (FI) Italia',
+				'title'    => _e('Techno System srl','technosystem'),
+				'sub_title'    => _e('Via Toscana, 160 - 50052 Certaldo (FI) Italia','technosystem'),
 				'icon_class'    => 'fas fa-map-marker-alt',
 			],
 			[
@@ -2022,8 +2022,8 @@ new \Kirki\Field\Repeater(
 				'icon_class'    => 'fal fa-phone',
 			],
 			[
-				'title'    => 'Skype call',
-				'sub_title'    => 'Skype chat, instant message',
+				'title'    => _e('Skype call','technosystem'),
+				'sub_title'    => _e('Skype chat, instant message','technosystem'),
 				'icon_class'    => 'fab fa-skype',
 			],
 
@@ -2056,27 +2056,27 @@ new \Kirki\Field\Repeater(
         'priority' => 4,
 		'default'  => [
 			[
-				'menu_title'    => 'Azienda',
+				'menu_title'    => _e('Azienda', 'technosystem'),
 				'button_url'    => '#',
 			],
 			[
-				'menu_title'    => 'Prodotti',
+				'menu_title'    => _e('Prodotti', 'technosystem'),
 				'button_url'    => '#',
 			],
 			[
-				'menu_title'    => 'Servizio',
+				'menu_title'    => _e('Servizio', 'technosystem'),
 				'button_url'    => '#',
 			],
 			[
-				'menu_title'    => 'Strumenti',
+				'menu_title'    => _e('Strumenti', 'technosystem'),
 				'button_url'    => '#',
 			],
 			[
-				'menu_title'    => 'News',
+				'menu_title'    => _e('News', 'technosystem'),
 				'button_url'    => '#',
 			],
 			[
-				'menu_title'    => 'Contatti',
+				'menu_title'    => _e('Contatti', 'technosystem'),
 				'button_url'    => '#',
 			],
 
@@ -2136,7 +2136,7 @@ new \Kirki\Field\Text(
 	[
 		'settings' => 'newsletter_form',
 		'label'    => esc_html__( 'Shortcode', 'technosystem' ),
-        'default'  => esc_html__( '[mc4wp_form id="195"]', 'technosystem' ),
+        'default'  => '[mc4wp_form id="195"]',
 		'section'  => 'footer_section',
 		'priority' => 13,
 	]
