@@ -1,12 +1,12 @@
 <?php
 
 
-define( 'THEME_VERSION', '1.0.3' );
+define( 'THEME_VERSION', '1.0.4' );
 define( 'THEME_URI', get_template_directory_uri(  ) );
 
 function technosystem_setup() {
 
-	load_theme_textdomain( 'c', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'technosystem', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
