@@ -155,4 +155,5 @@ $product_tags = get_terms( array(
 	</div>
 	</section>
 	<!--/ Product section -->
-	<?php get_footer(); ?>
+	<?php
+	get_footer();
