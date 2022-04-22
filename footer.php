@@ -53,7 +53,7 @@ $newsletter_form = Kirki::get_option( 'newsletter_form' );
 						<p class="footer-description">
 							<?php echo $footer_section_about; ?>
 						</p>
-						<h3 class="footer-logo-title fw-700">Connect With Us</h3>
+						<h3 class="footer-logo-title fw-700"><?php echo esc_html__( 'Connect With Us','technosystem' ); ?></h3>
 						<div class="social-icon d-flex align-items-center">
 							<?php foreach ($footer_social as $social): ?>
 							<a href="<?php echo $social['button_url']; ?>">
@@ -64,7 +64,7 @@ $newsletter_form = Kirki::get_option( 'newsletter_form' );
 					</div>
 				</div><!-- end col-->
 				<div class="col-lg-4 footer-menu">
-					<h3 class="fw-700 footer-menu-title">Menu</h3>
+					<h3 class="fw-700 footer-menu-title"><?php echo esc_html__( 'Menu','technosystem' ); ?></h3>
 					<ul class="footer-menu-list">
 						<?php foreach($footer_menu as $item): ?>
 						<li>
@@ -74,7 +74,7 @@ $newsletter_form = Kirki::get_option( 'newsletter_form' );
 					</ul>
 				</div><!-- end col -->
 				<div class="col-lg-4 footer-menu">
-					<h3 class="fw-700 footer-menu-title">Contact us</h3>
+					<h3 class="fw-700 footer-menu-title"><?php echo esc_html__( 'Contact us','technosystem' ); ?></h3>
 					<?php foreach($footer_contact as $item): ?>
 					<div class="footer-contact-info d-flex align-items-center">
 						<span class="footer-contact-info-icon">

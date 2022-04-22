@@ -28,7 +28,7 @@ $archive_slider = Kirki::get_option('archive_slider');
 	<!--/ breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb py-5 mb-0  d-flex justify-content-center">
-			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
+			<li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>"><?php echo esc_html__( 'Home','technosystem' ); ?></a></li>
 			<li class="breadcrumb-item active" aria-current="page"><?php echo single_cat_title();?></li>
 		</ol>
 	</nav>
@@ -50,7 +50,7 @@ $archive_slider = Kirki::get_option('archive_slider');
                                      endforeach;?></p>
                                 <h2 class="news-title"><?php the_title(); ?></h2>
                                 <p class="news-descript mb-4"><?php echo get_the_excerpt() ?></p>
-                                <a href="<?php echo get_the_permalink(); ?>" class="news-button btn">Leggi tutto</a>
+                                <a href="<?php echo get_the_permalink(); ?>" class="news-button btn"> <?php echo esc_html__( 'Leggi tutto','technosystem' ); ?></a>
                             </div>
                         </a>
                     </div>
