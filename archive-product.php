@@ -133,7 +133,7 @@ $product_tags = get_terms( array(
 			<div class="product-list">
 				<div class="row">
                     <?php while (have_posts(  )) : the_post(  ); ?>
-					<a href="#" class="col-xl-4 mb-4 text-decoration-none">
+					<a href="<?php echo get_the_permalink( ); ?>" class="col-xl-4 mb-4 text-decoration-none">
                         <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
 						<div class="product-info mt-4">
 							<h4><?php echo get_the_title(); ?></h4>
